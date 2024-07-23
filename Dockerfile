@@ -27,6 +27,7 @@ RUN set -eux \
         sudo tini unzip valgrind wget zip texinfo gcc-multilib chrpath socat cpio xz-utils debianutils \
         patch perl tar rsync bc xterm whois software-properties-common \
         dh-autoreconf g++ graphviz xdot mesa-utils \
+        python3-pip \
     && apt-get -yq clean \
     && rm -rf /var/lib/apt/lists/* \
     && exit 0
@@ -52,13 +53,6 @@ RUN set -eux \
         g++-aarch64-linux-gnu gcc-aarch64-linux-gnu \
     && apt-get -yq clean \
     && rm -rf /var/lib/apt/lists/* \
-    && exit 0
-
-# Install python pip
-RUN set -eux \
-    && python3 --version \
-    && apt install python3-pip \
-    && pip3 --version \
     && exit 0
 
 # Install python packages
