@@ -57,9 +57,7 @@ RUN set -eux \
 # Install python pip
 RUN set -eux \
     && python3 --version \
-    && curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py \
-    && python3 get-pip.py \
-    && rm get-pip.py \
+    && apt-get -yq install python3-pip \
     && python3 -m pip install -U pip \
     && pip3 --version \
     && pip3 install --upgrade pip setuptools wheel \
