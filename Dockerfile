@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV LC_ALL en_US.UTF-8
@@ -8,7 +8,7 @@ ENV LANGUAGE en_US.UTF-8
 
 # Replace APT sources
 RUN set -eux \
-    && sed -i 's/archive.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list \
+    && sed -i 's/archive.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list.d/ubuntu.sources \
     && apt-get update \
     && apt-get install -y apt-transport-https ca-certificates \
     && sed -i 's/http/https/g' /etc/apt/sources.list \
