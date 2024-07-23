@@ -33,11 +33,11 @@ RUN set -eux \
 
 # Install cmake
 RUN set -eux \
-    && wget https://github.com/Kitware/CMake/releases/download/v3.28.5/cmake-3.28.5-linux-x86_64.sh -q -O /tmp/cmake-install.sh \
+    && wget https://github.com/Kitware/CMake/releases/download/v3.30.1/cmake-3.30.1-linux-x86_64.sh -q -O /tmp/cmake-install.sh \
     && chmod u+x /tmp/cmake-install.sh \
-    && mkdir /opt/cmake-3.28.5 \
-    && /tmp/cmake-install.sh --skip-license --prefix=/opt/cmake-3.28.5 \
-    && ln -s /opt/cmake-3.28.5/bin/* /usr/local/bin \
+    && mkdir /opt/cmake-3.30.1 \
+    && /tmp/cmake-install.sh --skip-license --prefix=/opt/cmake-3.30.1 \
+    && ln -s /opt/cmake-3.30.1/bin/* /usr/local/bin \
     && cmake --version \
     && rm /tmp/* \
     && exit 0
