@@ -5,13 +5,13 @@
 **构建镜像**
 
 ```bash
-docker buildx build . -t ubuntu-dev/ubuntu22.04
+docker buildx build . -t ubuntu-dev/ubuntu24.04
 ```
 
 **使用镜像**
 
 ```bash
-docker run -itd -p 2201:22 --name dev ubuntu-dev/ubuntu22.04:latest
+docker run -itd -p 2201:22 --name dev ubuntu-dev/ubuntu24.04:latest
 ```
 
 ## 使用建议
