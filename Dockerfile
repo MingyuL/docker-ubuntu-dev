@@ -58,7 +58,6 @@ RUN set -eux \
 RUN set -eux \
     && python3 --version \
     && apt-get -yq install python3-pip \
-    && python3 -m pip install -U pip \
     && pip3 --version \
     && pip3 install --upgrade pip setuptools wheel \
     && pip3 --version \
