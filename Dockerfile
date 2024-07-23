@@ -55,14 +55,6 @@ RUN set -eux \
     && rm -rf /var/lib/apt/lists/* \
     && exit 0
 
-# Install python packages
-RUN set -eux \
-    && pip3 --version \
-    && pip3 install --upgrade pip setuptools wheel \
-    && pip3 --version \
-    && pip3 install --upgrade autoenv autopep8 cmake-format clang-format conan meson \
-    && pip3 install --upgrade cppclean flawfinder lizard pygments pybind11 GitPython pexpect subunit Jinja2 pylint CLinters \
-    && exit 0
 
 # Setup ssh
 RUN set -eux \
